@@ -34,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
         NotificationCompat.Builder notifyBuilder = new NotificationCompat.Builder(this)
                 .setContentTitle("Content Title")
                 .setContentText("Content Notification")
-                .setSmallIcon(R.mipmap.ic_launcher_round);
+                .setSmallIcon(R.mipmap.ic_launcher_round)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)//supaya muncul pop up
+                .setDefaults(NotificationCompat.DEFAULT_ALL);
 
         Notification notification=notifyBuilder.build();
         notificationManager.notify(NOTIFICATION_ID,notification);
